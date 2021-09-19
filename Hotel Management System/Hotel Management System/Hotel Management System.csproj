@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC81B2D5-4A37-45C8-B1A1-C9B2B4F2068D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel_Management_System</RootNamespace>
+    <AssemblyName>Hotel Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business logic layer\BookingandGuest.cs" />
+    <Compile Include="Business logic layer\Transections.cs" />
+    <Compile Include="Business logic layer\User.cs" />
+    <Compile Include="DataAccess layer\DataAccess.cs" />
+    <Compile Include="Presentation layer\Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Boyassign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Boyassign.Designer.cs">
+      <DependentUpon>Boyassign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\ManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Managersignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Managersignup.Designer.cs">
+      <DependentUpon>Managersignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\OwnerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\OwnerDashboard.Designer.cs">
+      <DependentUpon>OwnerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\receptionist registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\receptionist registration.Designer.cs">
+      <DependentUpon>receptionist registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Receptionistdashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Receptionistdashboard.Designer.cs">
+      <DependentUpon>Receptionistdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Release.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Release.Designer.cs">
+      <DependentUpon>Release.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation layer\Roomselection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation layer\Roomselection.Designer.cs">
+      <DependentUpon>Roomselection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation layer\Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Boyassign.resx">
+      <DependentUpon>Boyassign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\ManagerDashboard.resx">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Managersignup.resx">
+      <DependentUpon>Managersignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\OwnerDashboard.resx">
+      <DependentUpon>OwnerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\receptionist registration.resx">
+      <DependentUpon>receptionist registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Receptionistdashboard.resx">
+      <DependentUpon>Receptionistdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Release.resx">
+      <DependentUpon>Release.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation layer\Roomselection.resx">
+      <DependentUpon>Roomselection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Devices-secure-card.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Double-J-Design-Origami-Colored-Pencil-Blue-user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
